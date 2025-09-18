@@ -73,3 +73,20 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+
+# Firebase config
+/src/firebase.js
+
+# Google Services (Android)
+android/app/google-services.json
+
+# Google Services (iOS)
+ios/GoogleService-Info.plist
+
+firebase-debug.log
+firebase.json
+
+/functions/node_modules
+
+
