@@ -1,97 +1,142 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Here’s a professional `README.md` draft for your assessment, reflecting your current implementation and noting the limitation with push notifications:
 
-# Getting Started
+````markdown
+# React Native Chatroom App
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A simple **React Native chatroom app** with Firebase integration. Users can join with a username, send messages in real-time, and view all messages in chronological order.
 
-## Step 1: Start Metro
+> **Note:** Push notifications were planned but not implemented due to Firebase Functions requiring a paid Blaze plan. Messages work in real-time while the app is open or in the foreground.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Features
 
-```sh
-# Using npm
-npm start
+- User login with a unique username.
+- Real-time chatroom using **Firebase Realtime Database**.
+- Messages displayed in chronological order.
+- Own messages and others’ messages styled differently.
+- Theme toggle (light/dark mode).
+- Clean, modular code structure.
 
-# OR using Yarn
-yarn start
+---
+
+## Screenshots
+
+*Add screenshots here if possible.*
+
+---
+
+## Tech Stack
+
+- **React Native** (Expo or CLI)
+- **Firebase Realtime Database**
+- **React Context API** for authentication and theme
+- **AsyncStorage** for persisting login state
+- **React Native Vector Icons** for UI elements
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/chatroom-app.git
+cd chatroom-app
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
 ```
 
-## Step 2: Build and run your app
+3. **Configure Firebase**
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+* Create a Firebase project.
+* Add a **Realtime Database**.
+* Copy your `firebaseConfig` from Firebase and replace in `src/firebase.js`.
 
-### Android
+4. **Run the App**
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
+# or if using Expo
+expo start
 ```
 
-### iOS
+5. **Login**
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+* Enter a unique username.
+* Your username is saved locally, so you remain logged in until you log out.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
 
-```sh
-bundle install
+## Limitations / Notes
+
+* **Push notifications not implemented:**
+  We attempted to use Firebase Cloud Functions to send notifications when a message is sent, but deploying functions requires the **Blaze (pay-as-you-go) plan**. As this was not feasible within free-tier limits, push notifications are not functional in this version.
+
+* The app works fully for:
+
+  * Sending/receiving messages in real-time while the app is open.
+  * Persisting the username locally.
+
+* Future improvement: Implement push notifications with FCM once a paid plan is available.
+
+---
+
+## Folder Structure
+
+```
+chatroom-app/
+│
+├─ src/
+│   ├─ components/
+│   │   ├─ ChatRoom.jsx
+│   │   ├─ LoginScreen.jsx
+│   │   ├─ Message.jsx
+│   │   └─ ui/
+│   │       ├─ Input.jsx
+│   │       └─ SendButton.jsx
+│   ├─ contexts/
+│   │   ├─ AuthContext.jsx
+│   │   └─ ThemeContext.jsx
+│   └─ firebase.js
+│
+├─ App.js
+├─ package.json
+└─ README.md
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+## Deliverables
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+* **GitHub Repository:**
+  [https://github.com/your-username/chatroom-app](https://github.com/your-username/chatroom-app)
 
-```sh
-# Using npm
-npm run ios
+* **Android APK:**
+  The compiled APK is included in the repository or attached separately.
 
-# OR using Yarn
-yarn ios
-```
+* **Demo Video:**
+  Showcase:
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+  * Logging in with a username.
+  * Sending and receiving messages in real-time.
+  * Theme toggle.
+  * Logout and re-login with the same username.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+⚠️ Firebase Setup
+1. Create a Firebase project.
+2. Add a Realtime Database.
+3. Download `google-services.json` (Android) and place in `android/app/`.
+4. Create a `firebase.js` in `src/` with your Firebase config.
 
-Now that you have successfully run the app, let's make changes!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+"# vocso-assessment" 
