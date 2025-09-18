@@ -1,6 +1,4 @@
-Here’s a professional `README.md` draft for your assessment, reflecting your current implementation and noting the limitation with push notifications:
 
-````markdown
 # React Native Chatroom App
 
 A simple **React Native chatroom app** with Firebase integration. Users can join with a username, send messages in real-time, and view all messages in chronological order.
@@ -18,13 +16,6 @@ A simple **React Native chatroom app** with Firebase integration. Users can join
 - Theme toggle (light/dark mode).
 - Clean, modular code structure.
 
----
-
-## Screenshots
-
-*Add screenshots here if possible.*
-
----
 
 ## Tech Stack
 
@@ -116,7 +107,7 @@ chatroom-app/
 ## Deliverables
 
 * **GitHub Repository:**
-  [https://github.com/your-username/chatroom-app](https://github.com/your-username/chatroom-app)
+  [Repo](https://github.com/uk2459644/vocso-assessment)
 
 * **Android APK:**
   The compiled APK is included in the repository or attached separately.
