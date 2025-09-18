@@ -19,7 +19,7 @@ A simple **React Native chatroom app** with Firebase integration. Users can join
 
 ## Tech Stack
 
-- **React Native** (Expo or CLI)
+- **React Native** (CLI)
 - **Firebase Realtime Database**
 - **React Context API** for authentication and theme
 - **AsyncStorage** for persisting login state
@@ -40,8 +40,7 @@ cd chatroom-app
 
 ```bash
 npm install
-# or
-yarn install
+
 ```
 
 3. **Configure Firebase**
@@ -54,8 +53,7 @@ yarn install
 
 ```bash
 npx react-native run-android
-# or if using Expo
-expo start
+
 ```
 
 5. **Login**
