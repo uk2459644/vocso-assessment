@@ -7,6 +7,15 @@ A simple **React Native chatroom app** with Firebase integration. Users can join
 
 ---
 
+## Screenshots
+
+| Login Screen | Chatroom | Theme Toggle |
+|:------------:|:--------:|:------------:|
+| ![Login](assets/vocso1.jpg) | ![Chat](assets/vocso2.jpg) | ![Theme Toggle](assets/vocso3.jpg) |
+
+
+---
+
 ## Features
 
 - User login with a unique username.
